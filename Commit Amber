@@ -1,0 +1,68 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int menu;
+        System.out.println("""
+                \033[34m
+                ************************************
+                *   🌊💥  Battleship Game   🚢💣  *
+                *  Introducción a la programación  *            
+                *  Profesor: Jose A. Rivera Tencio *
+                *             Grupo 05             *  
+                *           Estudiantes:           * 
+                *       Amber Bustos Araya         * 
+                *       Rachel Cortés Torres       *
+                *       Joseph Garay Morales       *
+                *       Arleth Serrano Rodriguez   *                             
+                ************************************
+                """);
+        System.out.print("\033[34mPresione 1 para empezar el juego");
+        menu = entrada.nextInt();
+        switch (menu) {
+            case 1 -> Start();
+            default -> System.out.println("Hasta la próxima!");
+        }
+    }
+
+    private static void Start() {
+        Scanner entrada = new Scanner(System.in);
+        Scanner entrada2 = new Scanner(System.in);
+        System.out.print("\033[34mNombre del jugador 1 \uD83D\uDC64= ");
+        String jugador1 = entrada.nextLine();
+        System.out.print("\033[34mombre del jugador 2 \uD83D\uDC64= ");
+        String jugador2 = entrada2.nextLine();
+        tableros tablero = new tableros();
+        char[][] TuTablero = tablero.crearTablero(tablero.gettamanoTablero(), tablero.getagua());
+        char[][] TableroEnemigo = tablero.crearTablero(tablero.gettamanoTablero(), tablero.getagua());
+        char agua = tablero.getagua();
+        System.out.println("----"+jugador1+"----");
+        ImprimirTablero(TuTablero, agua);
+        System.out.println("----"+jugador2+"----");
+        ImprimirTablero(TableroEnemigo, agua);
+    }
+
+    private static void ImprimirTablero(char[][] tablero, char agua) {
+        byte tamanoTablero = (byte)tablero.length;
+        System.out.print("  ");
+        for(byte i=0; i < tamanoTablero; i++){
+            System.out.print(i + 1 + " ");
+        }
+        System.out.println();
+        for(byte fila = 0; fila < tamanoTablero; fila++){
+            System.out.print(fila + 1 + " ");
+            for(byte columna =0; columna < tamanoTablero; columna++){
+                char Posicion = tablero[fila][columna];
+                //escondemos los barcos con agua
+                //de momento rellenamos solo con agua ya que no hay barcos
+                if (Posicion == agua){
+                    System.out.print(agua+" ");
+                }
+                else{
+                    System.out.print(Posicion+"  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}

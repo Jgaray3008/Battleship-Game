@@ -16,13 +16,13 @@ cantidad de naves a colocar es la siguiente:
 Al iniciar el juego el jugador debe colocar sus naves. Esto se puede hacer de manera aleatoria o
 solicitando al jugador las coordenadas de las naves. La colocación de las naves del CPU puede
 ser preestablecido por los desarrolladores.
-1 2 3 4 5 6
-A - - - - -
-B - - - - - 
-C - - - - -
-D - - - - -
-E - - - - - 
-F - - - - - 
+1 2 3 4 5 6 |
+A - - - - - |
+B - - - - - |
+C - - - - - |
+D - - - - - |
+E - - - - - |
+F - - - - - |
 Universidad Fidélitas | Escuela de Ingeniería en Sistemas de Computación | SC-205 | 2022
 Flujo de Juego
 Primero se determina cual jugador va a iniciar. Para esto siempre se va a tener que el jugador inicia

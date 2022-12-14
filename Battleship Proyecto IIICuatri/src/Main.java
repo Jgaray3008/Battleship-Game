@@ -364,7 +364,8 @@ public class Main {
                             TuTablero[pcAtaques[0]][pcAtaques[1]] = '*';
                             TuTableroAtacado[pcAtaques[0]][pcAtaques[1]] = '*';
                         }
-                        if(TuTableroAtacado[pcAtaques[0]][pcAtaques[1]] == '-'|| TuTableroAtacado[pcAtaques[0]][pcAtaques[1]] == 'X') {
+                        if(TuTableroAtacado[pcAtaques[0]][pcAtaques[1]] == '-'|| 
+                           TuTableroAtacado[pcAtaques[0]][pcAtaques[1]] == 'X') {
                             TuTablero[pcAtaques[0]][pcAtaques[1]] = 'X';
                             System.out.println("***********************************************************");
                             System.out.println(jugador2+" ha atacado!!");

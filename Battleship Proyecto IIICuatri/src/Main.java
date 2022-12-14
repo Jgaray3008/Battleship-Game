@@ -20,7 +20,7 @@ public class Main {
                 *       Rachel Cortés Torres       *
                 *       Joseph Garay Morales       *
                 *       Arleth Serrano Rodriguez   *\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\040\
-                040\040\040\040\040\040\040\040\040\040\040\040\040
+                \040\040\040\040\040\040\040\040\040\040\040\040\040
                 ************************************
                 """);
         System.out.print("\033[34mDigite 1 para empezar el juego o cualquier tecla para salir.\n-> ");
